@@ -1,0 +1,5 @@
+- name: restart nginx
+  throttle: 2
+  ansible.builtin.service:
+      name: nginx
+      state: restarted

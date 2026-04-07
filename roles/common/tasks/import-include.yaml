@@ -1,0 +1,15 @@
+- name: from play-1
+  ansible.builtin.debug:
+   msg: "print from play-1"
+
+- name: setting fact
+  ansible.builtin.set_fact:
+    os: "debian"
+
+- name: from play-2
+  ansible.builtin.debug:
+   msg: "print from play-2"
+
+- name: from play-3
+  ansible.builtin.debug:
+   msg: "print from play-3"
