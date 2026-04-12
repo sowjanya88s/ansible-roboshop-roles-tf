@@ -1,12 +1,11 @@
 ansible_username: ec2-user
 ansible_password: DevOps321
-mongodb_host: mongodb-dev.sowjanya.fun
-catalogue_host: catalogue-dev.sowjanya.fun
-redis_host: redis-dev.sowjanya.fun
-user_host: user-dev.sowjanya.fun
-cart_host: cart-dev.sowjanya.fun
-shipping_host: shipping-dev.sowjanya.fun
-payment_host: payment-dev.sowjanya.fun
-rabbitmq_host: rabbitmq-dev.sowjanya.fun
-mysql_host: mysql-dev.sowjanya.fun
-
+mongodb_host: mongodb-{{ env }}.sowjanya.fun
+catalogue_host: catalogue-{{ env }}.sowjanya.fun
+redis_host: redis-{{ env }}.sowjanya.fun
+user_host: user-{{ env }}.sowjanya.fun
+cart_host: cart-{{ env }}.sowjanya.fun
+shipping_host: shipping-{{ env }}.sowjanya.fun
+payment_host: payment-{{ env }}.sowjanya.fun
+rabbitmq_host: rabbitmq-{{ env }}.sowjanya.fun
+mysql_host: mysql-{{ env }}.sowjanya.fun
