@@ -11,15 +11,21 @@
     ansible.builtin.file:
      path: /usr/share/nginx/html/*
      state: absent
+  
+  - name: create html directory
+    ansible.builtin.file:
+    path: /usr/share/nginx/html
+    state: directory
+
 
   - name: download code from link
     ansible.builtin.get_url:
       url: https://roboshop-artifacts.s3.amazonaws.com/frontend-v3.zip
-      dest: /tmp
+      dest: /tmp/frontend.zip
 
   - name: unzipping code
     ansible.builtin.unarchive:
-      src: /tmp/frontend-v3.zip
+      src: /tmp/frontend.zip
       dest: /usr/share/nginx/html
       remote_src: yes
 
